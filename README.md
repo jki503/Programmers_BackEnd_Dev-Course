@@ -19,4 +19,7 @@ Author: Jung
 
 - [StringBuilder & StringBuffer](./java_for_framework/stringBuilder-stringBuffer.md)
 - [Intellij 단축키](./java_for_framework/intellij_shorcut.md)
-- [Object 주요 메서드](./java_for_framework/object.md)
+- [Object 주요 메서드](./java_for_framework/object.md)x
+- [Collection](./java_for_framework/collections.md)
+- [객체지향 프로그래밍](./java_for_framework/oop.md)
+- [UML](./java_for_framework/uml.md)
