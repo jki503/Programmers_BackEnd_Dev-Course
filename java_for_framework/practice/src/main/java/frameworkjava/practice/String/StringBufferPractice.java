@@ -1,4 +1,4 @@
-package frameworkjava.practice.String;
+package frameworkjava.practice.string;
 
 public class StringBufferPractice {
 

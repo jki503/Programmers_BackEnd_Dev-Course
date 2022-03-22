@@ -2,6 +2,10 @@
 
 </br>
 
+- 시간 될 때 맵, 셋 자료구조도 정리해보기.
+
+</br>
+
 |              Collections 도표              |
 | :----------------------------------------: |
 | ![Collections 도표](./res/collections.png) |
@@ -223,28 +227,69 @@ public class PriorityQueuePractice {
 
 </br>
 
-### HashMap
+```java
+
+/*
+* K : the type of keys maintained by this map
+* V : the type of mapped values
+*/
+
+public interface Map<K, V> {
+
+}
+
+```
 
 </br>
 
-### LinkedMap
+|                  method                  |   return type   |
+| :--------------------------------------: | :-------------: |
+|              containsKey()               |     boolean     |
+|             containsValue()              |     boolean     |
+|             get(Object key)              |        V        |
+| getOrDefault(Object key, V defaultValue) |        V        |
+|                put(K key)                |        V        |
+|            remove(Object key)            |        V        |
+|                 values()                 | Collections\<V> |
+|                 KeySet()                 |     Set\<K>     |
+|                Map.Entry                 |   Entry\<K,V>   |
+
+### HashMap vs LinkedHashMap vs TreeMap vs ConcurrentHashMap
 
 </br>
 
-### TreeMap
+|             | HashMap | LinkedHashMap | TreeMap | ConcurrentHashMap |
+| :---------: | :-----: | :-----------: | :-----: | :---------------: |
+|     get     |  O(1)   |     O(1)      | O(logN) |       O(1)        |
+| containsKey |  O(1)   |     O(1)      | O(logN) |       O(1)        |
+| thread-safe |    X    |       X       |    X    |         O         |
+|  성능 순위  |    1    |       2       |    3    |         4         |
 
 </br>
 
-## Set
+</br>
+
+## Set(대표적인 함수 알아서 생략.)
 
 </br>
 
-### HashSet
+### HashSet vs LinkedHashSet vs TreeSet vs ConcurrentSkipListSet
 
 </br>
 
-### LinkedHashSet
+|             | HashSet | LinkedHashSet | TreeSet | ConcurrentSkipListSet |
+| :---------: | :-----: | :-----------: | :-----: | :-------------------: |
+|     add     |  O(1)   |     O(1)      | O(logN) |        O(logN)        |
+|  contains   |  O(1)   |     O(1)      | O(logN) |        O(logN)        |
+| thread-safe |    X    |       X       |    X    |           O           |
+|  null 허용  |    O    |       O       |    X    |           O           |
+|  성능 순위  |    1    |       2       |    3    |           4           |
 
-</br>
+> ConcurrentSkipListSet도 TreeSet과 같이 정렬 허용
 
-### TreeSet
+```java
+
+// 처음 안 사실...
+Set<Integer> set = Collections.newSetFromMap(new ConcurrentHashMap<Integer,Boolean>());
+
+```
