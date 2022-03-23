@@ -1,7 +1,5 @@
 package frameworkjava.practice.object;
 
-import frameworkjava.practice.Unit;
-
 public class ObjectPractice {
 
     public static void main(String[] args) {

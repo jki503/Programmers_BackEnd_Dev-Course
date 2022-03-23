@@ -1,4 +1,4 @@
-package frameworkjava.practice;
+package frameworkjava.practice.object;
 
 import java.util.Objects;
 
