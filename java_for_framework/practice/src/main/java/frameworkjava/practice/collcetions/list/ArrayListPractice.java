@@ -15,7 +15,7 @@ public class ArrayListPractice {
         }
 
         Iterator<Integer> iter = list.iterator();
-        iter.forEachRemaining((i) -> System.out.println(i));
+        iter.forEachRemaining(System.out::println);
 
     }
 }
