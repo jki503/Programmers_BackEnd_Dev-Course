@@ -19,3 +19,5 @@
 | Entity, Value Object, Aggregate | State and Behavior |
 |      Date Transfer Object       |     State Only     |
 |       Service, Repository       |   Behavior Only    |
+
+</br>
