@@ -1,4 +1,4 @@
-package org.prgms.kdt.kdtspringorder;
+package org.prgms.kdt.kdtspringorder.order;
 
 import java.util.UUID;
 
