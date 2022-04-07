@@ -21,15 +21,15 @@ class B{
     }
 }
 
-@Configuration
 class CircularConfig{
 
-    @Bean
+    //@Bean
     public A a(B b){
         return new A(b);
     }
 
-    @Bean B b(A a){
+    //@Bean
+    public B b(A a){
         return new B(a);
     }
 }

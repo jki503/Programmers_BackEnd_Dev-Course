@@ -5,6 +5,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
 
@@ -17,7 +18,8 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
 //@Primary 같은 타입에서 우선순위
-@Qualifier("memory")
+@Profile("local")
+@Primary
 //@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class MemoryVoucherRepository implements VoucherRepository, InitializingBean, DisposableBean {
 

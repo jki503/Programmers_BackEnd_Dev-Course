@@ -1,7 +1,6 @@
 package org.prgms.kdt.kdtspringorder.voucher;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.text.MessageFormat;
@@ -13,7 +12,7 @@ public class VoucherService {
     //@Autowired  필드 주입
     private final VoucherRepository voucherRepository;
 
-    public VoucherService(@Qualifier("memory") VoucherRepository voucherRepository) {
+    public VoucherService(VoucherRepository voucherRepository) {
         this.voucherRepository = voucherRepository;
     }
 
