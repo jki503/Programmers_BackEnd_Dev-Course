@@ -20,6 +20,7 @@ public class KdtSpringOrderApplication {
 		var springApplication = new SpringApplication(KdtSpringOrderApplication.class);
 		springApplication.setAdditionalProfiles("local");
 		var applicationContext = springApplication.run(args);
+		applicationContext.refresh();
 		var orderProperties	= applicationContext.getBean(OrderProperties.class);
 	}
 

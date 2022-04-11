@@ -2,6 +2,7 @@ package org.prgms.kdt.kdtspringorder.voucher;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Primary;
@@ -18,6 +19,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
 //@Primary 같은 타입에서 우선순위
+@Primary
 @Profile("local")
 //@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class MemoryVoucherRepository implements VoucherRepository, InitializingBean, DisposableBean {

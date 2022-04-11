@@ -40,4 +40,4 @@ Temporary Items
 *.vsix
 
 # lecture
-./springboot/lecture/*/
+./springboot/lecture/

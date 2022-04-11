@@ -12,6 +12,7 @@ public class VoucherService {
     //@Autowired  필드 주입
     private final VoucherRepository voucherRepository;
 
+    @Autowired
     public VoucherService(VoucherRepository voucherRepository) {
         this.voucherRepository = voucherRepository;
     }
