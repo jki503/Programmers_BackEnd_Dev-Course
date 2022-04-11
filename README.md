@@ -12,7 +12,7 @@ Author: Jung
 
 - [**Table Of Contents**](#table-of-contents)
   - [**프레임워크를 위한 Java**](#프레임워크를-위한-java)
-- [**SpringBoot Part1**](#springboot-part1)
+- [**SpringBoot**](#springboot)
 
 </br>
 
@@ -32,6 +32,7 @@ Author: Jung
 
 </br>
 
-## **SpringBoot Part1**
+## **SpringBoot**
 
-- [day 1~2](./spring_boot_part1/doc/_01_02_.md)
+- [part1](./springboot/doc/week_1.md)
+- [part2](./springboot/doc/week_2.md)
