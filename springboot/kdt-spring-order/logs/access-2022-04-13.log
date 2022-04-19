@@ -1,0 +1,335 @@
+05:59:48.115 [main] ERROR o.p.k.k.JdbcCustomerRepository - Got Error while closing connection
+java.sql.SQLSyntaxErrorException: Unknown database 'order_mgnt'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:829)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:242)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.main(JdbcCustomerRepository.java:17)
+05:59:59.735 [main] ERROR o.p.k.k.JdbcCustomerRepository - Got Error while closing connection
+java.sql.SQLSyntaxErrorException: Unknown database 'order_mgnt'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:829)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:242)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.main(JdbcCustomerRepository.java:17)
+06:02:06.253 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer name tester00
+06:02:06.257 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer name tester01
+06:02:06.258 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer name tester02
+06:04:28.340 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 1557de78-c4b6-36f8-8a2e-3e4b90e67863
+06:04:28.342 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer name -> tester00
+06:04:28.343 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 17f37eea-d945-3eef-9fbb-1030f4c9560b
+06:04:28.343 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer name -> tester01
+06:04:28.343 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 60ff1b88-8581-32ea-8ce3-90a0dc0ed8de
+06:04:28.343 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer name -> tester02
+06:05:07.627 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 1557de78-c4b6-36f8-8a2e-3e4b90e67863 customer name -> tester00
+06:05:07.631 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 17f37eea-d945-3eef-9fbb-1030f4c9560b customer name -> tester01
+06:05:07.632 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 60ff1b88-8581-32ea-8ce3-90a0dc0ed8de customer name -> tester02
+06:08:24.409 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 1557de78-c4b6-36f8-8a2e-3e4b90e67863 customer name -> tester00
+06:08:24.412 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 17f37eea-d945-3eef-9fbb-1030f4c9560b customer name -> tester01
+06:08:24.412 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 60ff1b88-8581-32ea-8ce3-90a0dc0ed8de customer name -> tester02
+06:27:00.094 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> e8aaa309-3804-3222-9b07-e9efb964a2f9 customer name -> tester00, createdAt -> 2022-04-13T06:26:46
+06:27:00.097 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 52ff84cb-71f8-39a2-ab96-5252065a76c1 customer name -> tester01, createdAt -> 2022-04-13T06:26:46
+06:27:00.098 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> ad974744-db53-3c5a-9fa3-e8854be53d9e customer name -> tester02, createdAt -> 2022-04-13T06:26:46
+06:32:53.872 [main] ERROR o.p.k.k.JdbcCustomerRepository - Got Error while closing connection
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0}' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1201)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.findNames(JdbcCustomerRepository.java:25)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.main(JdbcCustomerRepository.java:70)
+06:33:43.765 [main] ERROR o.p.k.k.JdbcCustomerRepository - Got Error while closing connection
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '}' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1201)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.findNames(JdbcCustomerRepository.java:25)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.main(JdbcCustomerRepository.java:70)
+06:34:56.767 [main] ERROR o.p.k.k.JdbcCustomerRepository - Got Error while closing connection
+java.sql.SQLSyntaxErrorException: Unknown column 'teter01' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1201)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.findNames(JdbcCustomerRepository.java:25)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.main(JdbcCustomerRepository.java:70)
+06:36:13.321 [main] ERROR o.p.k.k.JdbcCustomerRepository - Got Error while closing connection
+java.sql.SQLSyntaxErrorException: Unknown column 'teter01' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1201)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.findNames(JdbcCustomerRepository.java:25)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.main(JdbcCustomerRepository.java:70)
+06:36:35.720 [main] ERROR o.p.k.k.JdbcCustomerRepository - Got Error while closing connection
+java.sql.SQLSyntaxErrorException: Unknown column 'tester01' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1201)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.findNames(JdbcCustomerRepository.java:25)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.main(JdbcCustomerRepository.java:70)
+06:37:14.072 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers where email = tester01
+06:37:14.657 [main] ERROR o.p.k.k.JdbcCustomerRepository - Got Error while closing connection
+java.sql.SQLSyntaxErrorException: Unknown column 'tester01' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1201)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.findNames(JdbcCustomerRepository.java:25)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.main(JdbcCustomerRepository.java:70)
+06:37:29.317 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers where name = tester01
+06:37:30.064 [main] ERROR o.p.k.k.JdbcCustomerRepository - Got Error while closing connection
+java.sql.SQLSyntaxErrorException: Unknown column 'tester01' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1201)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.findNames(JdbcCustomerRepository.java:25)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.main(JdbcCustomerRepository.java:70)
+06:38:10.225 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers where name = {0}
+06:38:10.889 [main] ERROR o.p.k.k.JdbcCustomerRepository - Got Error while closing connection
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0}' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1201)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.findNames(JdbcCustomerRepository.java:25)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.main(JdbcCustomerRepository.java:70)
+06:38:27.502 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers where name = tester01
+06:38:28.252 [main] ERROR o.p.k.k.JdbcCustomerRepository - Got Error while closing connection
+java.sql.SQLSyntaxErrorException: Unknown column 'tester01' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1201)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.findNames(JdbcCustomerRepository.java:25)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.main(JdbcCustomerRepository.java:70)
+06:39:30.031 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers where name = tester01
+06:39:30.625 [main] ERROR o.p.k.k.JdbcCustomerRepository - Got Error while closing connection
+java.sql.SQLSyntaxErrorException: Unknown column 'tester01' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1201)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.findNames(JdbcCustomerRepository.java:25)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.main(JdbcCustomerRepository.java:70)
+06:40:31.683 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers where name = 'tester01'
+06:40:32.329 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 52ff84cb-71f8-39a2-ab96-5252065a76c1 customer name -> tester01, createdAt -> 2022-04-13T06:26:46
+06:40:32.332 [main] INFO  o.p.k.k.JdbcCustomerRepository - Found name : tester01
+06:41:20.698 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers where name = \{0}\
+06:41:21.321 [main] ERROR o.p.k.k.JdbcCustomerRepository - Got Error while closing connection
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\{0}\' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1201)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.findNames(JdbcCustomerRepository.java:25)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.main(JdbcCustomerRepository.java:70)
+06:41:42.215 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers where name = 'tester01'
+06:41:42.855 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 52ff84cb-71f8-39a2-ab96-5252065a76c1 customer name -> tester01, createdAt -> 2022-04-13T06:26:46
+06:41:42.861 [main] INFO  o.p.k.k.JdbcCustomerRepository - Found name : tester01
+06:43:19.052 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers where name = 'tester01'
+06:43:20.007 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 52ff84cb-71f8-39a2-ab96-5252065a76c1 customer name -> tester01, createdAt -> 2022-04-13T06:26:46
+06:43:20.012 [main] INFO  o.p.k.k.JdbcCustomerRepository - Found name : tester01
+06:43:20.014 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers where name = 'tester01' OR 'a'='a'
+06:43:20.099 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> e8aaa309-3804-3222-9b07-e9efb964a2f9 customer name -> tester01' OR 'a'='a, createdAt -> 2022-04-13T06:26:46
+06:43:20.100 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 52ff84cb-71f8-39a2-ab96-5252065a76c1 customer name -> tester01' OR 'a'='a, createdAt -> 2022-04-13T06:26:46
+06:43:20.101 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> ad974744-db53-3c5a-9fa3-e8854be53d9e customer name -> tester01' OR 'a'='a, createdAt -> 2022-04-13T06:26:46
+06:43:20.103 [main] INFO  o.p.k.k.JdbcCustomerRepository - Found name : tester00
+06:43:20.103 [main] INFO  o.p.k.k.JdbcCustomerRepository - Found name : tester01
+06:43:20.103 [main] INFO  o.p.k.k.JdbcCustomerRepository - Found name : tester02
+07:19:55.852 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers where name = '?'
+07:19:56.624 [main] ERROR o.p.k.k.JdbcCustomerRepository - Got Error while closing connection
+java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.checkBounds(ClientPreparedStatement.java:1396)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.getCoreParameterIndex(ClientPreparedStatement.java:1409)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.setString(ClientPreparedStatement.java:1776)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.findNames(JdbcCustomerRepository.java:51)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.main(JdbcCustomerRepository.java:97)
+07:19:56.627 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers where name = '?'
+07:19:56.729 [main] ERROR o.p.k.k.JdbcCustomerRepository - Got Error while closing connection
+java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.checkBounds(ClientPreparedStatement.java:1396)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.getCoreParameterIndex(ClientPreparedStatement.java:1409)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.setString(ClientPreparedStatement.java:1776)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.findNames(JdbcCustomerRepository.java:51)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.main(JdbcCustomerRepository.java:107)
+07:20:36.352 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers where name = ?
+07:21:00.827 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers where name = ?
+07:21:01.489 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 52ff84cb-71f8-39a2-ab96-5252065a76c1 customer name -> tester01, createdAt -> 2022-04-13T06:26:46
+07:21:01.495 [main] INFO  o.p.k.k.JdbcCustomerRepository - Found name : tester01
+07:48:51.563 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers
+07:48:51.669 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 34a9b3e1-3061-391b-a71a-8fc0976142d3 customer name -> tester00, createdAt -> 2022-04-13T07:42:24
+07:48:51.671 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 1d34fd04-07a6-3548-ac8a-f2866ea65aee customer name -> tester01, createdAt -> 2022-04-13T07:42:24
+07:48:51.671 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 35de45de-65d2-372b-8807-7f6b1e94102a customer name -> tester02, createdAt -> 2022-04-13T07:42:24
+07:48:51.673 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 44568341-1644-3028-be40-42bc27b024c5 customer name -> new-user, createdAt -> 2022-04-13T07:48:51
+07:48:51.675 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> tester00
+07:48:51.675 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> tester01
+07:48:51.675 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> tester02
+07:48:51.675 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> new-user
+07:50:49.608 [main] ERROR o.p.k.k.JdbcCustomerRepository - Got Error while closing connection
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'new-user@gamil.com' for key 'customers.unq_user_email'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1098)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1046)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1371)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1031)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.insertCustomer(JdbcCustomerRepository.java:105)
+	at org.prgms.kdt.kdtspringorder.JdbcCustomerRepository.main(JdbcCustomerRepository.java:159)
+07:50:49.700 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers
+07:50:49.782 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 0619a306-4c67-3fd9-9c7f-f216a5b3fec0 customer name -> new-user2, createdAt -> 2022-04-13T07:50:49
+07:50:49.784 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 34a9b3e1-3061-391b-a71a-8fc0976142d3 customer name -> tester00, createdAt -> 2022-04-13T07:42:24
+07:50:49.784 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 1d34fd04-07a6-3548-ac8a-f2866ea65aee customer name -> tester01, createdAt -> 2022-04-13T07:42:24
+07:50:49.784 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 35de45de-65d2-372b-8807-7f6b1e94102a customer name -> tester02, createdAt -> 2022-04-13T07:42:24
+07:50:49.784 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 44568341-1644-3028-be40-42bc27b024c5 customer name -> new-user, createdAt -> 2022-04-13T07:48:51
+07:50:49.786 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> new-user2
+07:50:49.786 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> tester00
+07:50:49.786 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> tester01
+07:50:49.786 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> tester02
+07:50:49.786 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> new-user
+07:57:24.840 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers
+07:57:24.903 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 85c90805-94b5-394b-b6fb-5762bd99839e customer name -> new-user2, createdAt -> 2022-04-13T07:57:24
+07:57:24.905 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> c0d066eb-903c-33b9-a5ae-b9510df2f7c5 customer name -> new-user, createdAt -> 2022-04-13T07:57:24
+07:57:24.909 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> new-user2
+07:57:24.910 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> new-user
+07:58:47.584 [main] INFO  o.p.k.k.JdbcCustomerRepository - count -> 2
+07:58:47.730 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers
+07:58:47.801 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 03bb1d0f-3121-31ba-9e21-05e6d595d5fe customer name -> new-user2, createdAt -> 2022-04-13T07:58:47
+07:58:47.802 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> f53c4b13-a847-3760-9de8-8fc1ca9e12fc customer name -> new-user, createdAt -> 2022-04-13T07:58:47
+07:58:47.806 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> new-user2
+07:58:47.806 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> new-user
+08:00:13.524 [main] INFO  o.p.k.k.JdbcCustomerRepository - deleted count -> 3
+08:00:13.803 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers
+08:00:13.894 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> c3289ec5-cb54-3184-b297-6a789e375da0 customer name -> new-user2, createdAt -> 2022-04-13T08:00:13
+08:00:13.895 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 7b1eca6d-f00a-38a7-99b1-060f7a2706b3 customer name -> new-user, createdAt -> 2022-04-13T08:00:13
+08:00:13.901 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> new-user2
+08:00:13.901 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> new-user
+08:07:53.866 [main] INFO  o.p.k.k.JdbcCustomerRepository - deleted count -> 2
+08:07:54.065 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers
+08:07:54.138 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 193d933c-7ccc-3a4f-ba6a-118d7ca67178 customer name -> updated-user2, createdAt -> 2022-04-13T08:07:54
+08:07:54.139 [main] INFO  o.p.k.k.JdbcCustomerRepository - customer id -> 3e351715-4823-38cd-b0c1-26743adf3c67 customer name -> new-user, createdAt -> 2022-04-13T08:07:53
+08:07:54.142 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> updated-user2
+08:07:54.143 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> new-user
+08:09:56.185 [main] INFO  o.p.k.k.JdbcCustomerRepository - deleted count -> 2
+08:09:56.365 [main] INFO  o.p.k.k.JdbcCustomerRepository - select * from customers
+08:09:56.443 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> updated-user2
+08:09:56.443 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> new-user
+08:11:20.650 [main] INFO  o.p.k.k.JdbcCustomerRepository - deleted count -> 2
+08:11:20.911 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> updated-user2
+08:11:20.912 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> new-user
+08:12:15.179 [main] INFO  o.p.k.k.JdbcCustomerRepository - deleted count -> 2
+08:12:15.396 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> new-user
+08:12:15.396 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> new-user2
+08:12:15.494 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> new-user
+08:12:15.494 [main] INFO  o.p.k.k.JdbcCustomerRepository - FoundName -> updated-user2
+08:21:26.781 [main] INFO  o.p.k.k.JdbcCustomerRepository - deleted count -> 2
+08:21:26.875 [main] INFO  o.p.k.k.JdbcCustomerRepository - created customerId -> 2e41df57-90c8-4eb7-85b5-22afb507334f
+08:21:26.990 [main] INFO  o.p.k.k.JdbcCustomerRepository - Found customerId : new-user
+08:21:26.990 [main] INFO  o.p.k.k.JdbcCustomerRepository - Found customerId : new-user
+08:21:48.352 [main] INFO  o.p.k.k.JdbcCustomerRepository - deleted count -> 2
+08:21:48.438 [main] INFO  o.p.k.k.JdbcCustomerRepository - created customerId -> 40c4dbaa-b361-4f03-9044-86039cf02527
+08:21:48.566 [main] INFO  o.p.k.k.JdbcCustomerRepository - Found customerId : 9ef3ad33-5b20-30ab-9bae-eb9c9a343c5e
+08:21:48.567 [main] INFO  o.p.k.k.JdbcCustomerRepository - Found customerId : 858a0140-32de-3449-9b3f-d4a1ade90454
+08:24:39.025 [main] INFO  o.p.k.k.JdbcCustomerRepository - deleted count -> 2
+08:24:39.121 [main] INFO  o.p.k.k.JdbcCustomerRepository - created customerId -> 8f6d6e94-89be-4496-a534-eef412ff4ed4
+08:24:39.121 [main] INFO  o.p.k.k.JdbcCustomerRepository - created UUID version -> 4
+08:24:39.239 [main] INFO  o.p.k.k.JdbcCustomerRepository - Found customerId : a71f2e53-6624-384b-8844-d8561c17570f and version : 3
+08:24:39.240 [main] INFO  o.p.k.k.JdbcCustomerRepository - Found customerId : a6954d24-3c9c-3ee7-a3c2-69450efe3fec and version : 3
+08:26:11.350 [main] INFO  o.p.k.k.JdbcCustomerRepository - deleted count -> 2
+08:26:11.353 [main] INFO  o.p.k.k.JdbcCustomerRepository - created customerId -> 1895e025-1360-48b9-a4ef-1b20222f4d28
+08:26:11.354 [main] INFO  o.p.k.k.JdbcCustomerRepository - created UUID version -> 4
+08:26:11.511 [main] INFO  o.p.k.k.JdbcCustomerRepository - Found customerId : 3956c663-76c5-3c65-93ca-706f325e0def and version : 3
+08:39:05.251 [main] INFO  o.p.k.k.JdbcCustomerRepository - deleted count -> 1
+08:39:05.257 [main] INFO  o.p.k.k.JdbcCustomerRepository - created customerId -> e27da7c8-6308-4399-bd6a-36a304b3c641
+08:39:05.257 [main] INFO  o.p.k.k.JdbcCustomerRepository - created UUID version -> 4
+08:39:05.532 [main] INFO  o.p.k.k.JdbcCustomerRepository - Found customerId : e27da7c8-6308-4399-bd6a-36a304b3c641 and version : 4
+23:24:07.373 [main] ERROR o.p.k.k.c.CustomerJdbcRepository - Got Error while closing connection
+java.sql.SQLException: No value specified for parameter 4
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1121)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1046)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1371)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1031)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.prgms.kdt.kdtspringorder.customer.CustomerJdbcRepository.update(CustomerJdbcRepository.java:60)
+	at org.prgms.kdt.kdtspringorder.customer.CustomerJdbcRepositoryTest.testUpdate(CustomerJdbcRepositoryTest.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)

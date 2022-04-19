@@ -36,11 +36,11 @@
         </encoder>
     </appender>
 
-    <logger name = "org.prgms.kdt.kdtspringorder" level = "debug" >
+    <logger name = "org.prgms.kdt.kdtspringorder" level = "info" >
         <appender-ref ref="ROLLING_FILE"/>
     </logger>
 
-    <root level="debug">
+    <root level="info">
         <appender-ref ref="STDOUT"/>
     </root>
 </configuration>

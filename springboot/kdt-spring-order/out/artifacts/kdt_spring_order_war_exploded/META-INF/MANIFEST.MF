@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: jung
+Build-Jdk: Oracle OpenJDK version 16.0.2
+Implementation-Title: kdt-spring-order
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: org.prgms.kdt
+Main-Class: ${start-class}
+

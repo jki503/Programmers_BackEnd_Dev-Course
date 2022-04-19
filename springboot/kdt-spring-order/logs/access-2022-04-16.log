@@ -1,0 +1,4 @@
+13:53:04.121 [main] INFO  o.p.k.k.LoggingInvocationHandler - add executed
+13:53:04.126 [main] INFO  o.p.kdt.kdtspringorder.JdkProxyTest - ADd -> 3
+13:54:10.861 [main] INFO  o.p.k.k.LoggingInvocationHandler - add executed in org.prgms.kdt.kdtspringorder.CalculatorImpl
+13:54:10.867 [main] INFO  o.p.kdt.kdtspringorder.JdkProxyTest - ADD -> 3
