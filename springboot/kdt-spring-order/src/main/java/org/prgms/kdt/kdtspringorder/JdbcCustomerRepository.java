@@ -181,11 +181,11 @@ public class JdbcCustomerRepository {
                     var updateEmailStatement = connection.prepareStatement(updateEmailSql);
             ) {
                 updateNameStatement.setString(1, customer.getName());
-                updateNameStatement.setBytes(2, customer.getCustomerID().toString().getBytes());
+                updateNameStatement.setBytes(2, customer.getCustomerId().toString().getBytes());
                 updateNameStatement.executeUpdate();
 
                 updateEmailStatement.setString(1,customer.getEmail());
-                updateEmailStatement.setBytes(2, customer.getCustomerID().toString().getBytes());
+                updateEmailStatement.setBytes(2, customer.getCustomerId().toString().getBytes());
                 updateEmailStatement.executeUpdate();
                 connection.setAutoCommit(true);
             }

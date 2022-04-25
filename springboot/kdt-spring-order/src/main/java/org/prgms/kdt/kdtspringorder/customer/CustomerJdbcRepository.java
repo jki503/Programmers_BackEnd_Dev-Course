@@ -9,11 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.nio.ByteBuffer;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -45,7 +41,7 @@ public class CustomerJdbcRepository implements CustomerRepository {
     @Override
     public Customer insert(Customer customer) {
         var update = jdbcTemplate.update("INSERT INTO customers(customer_id,name,email,create_at) VALUES(UUID_TO_BIN(?),?,?,?)",
-                customer.getCustomerID().toString().getBytes(),
+                customer.getCustomerId().toString().getBytes(),
                 customer.getName(),
                 customer.getEmail(),
                 Timestamp.valueOf(customer.getCreatedAt())
@@ -63,7 +59,7 @@ public class CustomerJdbcRepository implements CustomerRepository {
                 customer.getName(),
                 customer.getEmail(),
                 customer.getLastLoginAt() != null ? Timestamp.valueOf(customer.getLastLoginAt()) : null,
-                customer.getCustomerID().toString().getBytes()
+                customer.getCustomerId().toString().getBytes()
         );
 
         if (update != 1)

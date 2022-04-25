@@ -12,6 +12,39 @@ Author: Jung
   - [**Servlet**](#servlet)
     - [**Servlet Life Cycle**](#servlet-life-cycle)
     - [**Servlet Tomcat 구동**](#servlet-tomcat-구동)
+- [**Day 2**](#day-2)
+  - [**Dispatch Servlet**](#dispatch-servlet)
+  - [**Resource Handler**](#resource-handler)
+- [**Day 3**](#day-3)
+  - [**WebApplicationContext**](#webapplicationcontext)
+  - [**REST API**](#rest-api)
+- [**Day 4**](#day-4)
+  - [**SPA**](#spa)
+  - [**CORS**](#cors)
+
+  - [**SPA**](#spa)
+
+  - [**SPA**](#spa)
+
+  - [**SPA**](#spa)
+
+  - [**SPA**](#spa)
+
+  - [**WebApplicationContext**](#webapplicationcontext)
+  - [**REST API**](#rest-api)
+
+  - [**WebApplicationContext**](#webapplicationcontext)
+
+  - [**WebApplicationContext**](#webapplicationcontext)
+
+  - [**HTTP**](#http)
+  - [**HTML**](#html)
+  - [**Servlet**](#servlet)
+    - [**Servlet Life Cycle**](#servlet-life-cycle)
+    - [**Servlet Tomcat 구동**](#servlet-tomcat-구동)
+
+- [**Day 2**](#day-2)
+  - [**Dispatch Servlet**](#dispatch-servlet)
 
 </br>
 
@@ -201,3 +234,253 @@ public class KdtWebApplicationInitializer implements WebApplicationInitializer {
 }
 
 ```
+
+</br>
+</br>
+</br>
+
+## **Day 2**
+
+</br>
+
+### **Dispatch Servlet**
+
+</br>
+
+|                  Dispatch servlet                   |
+| :-------------------------------------------------: |
+| ![dispatch servlet img](./res/dispatch_servlet.png) |
+
+> 프론트 컨트롤러를 사용하여 디스패치 서블릿 제공  
+> 서블릿을 작성하는 것이 아니라 컨트롤러를 작성하고  
+> 스프링으 디스패치 서블릿을 통해 컨트롤러를 싱행시키는 동작 원리
+
+</br>
+
+|                Spring MVC 흐름                |
+| :-------------------------------------------: |
+| ![spring mvc flow](./res/spring_mvc_flow.png) |
+
+- 1. HTTP를 요청 후 dispatch servlet이 컨트롤러를 찾아서 요청을 위임
+- 2. 컨트롤러가 서비스를 호출
+- 3. 비즈니스 로직을 처리 후 결과를 전달
+- 4. 컨트롤러는 화면을 전달할 모델을 생성
+- 5. 그 후 모델과 뷰를 dispatch servlet으로 전달한 후 응답을 만들어냄
+
+</br>
+
+|            handler            |
+| :---------------------------: |
+| ![handelr](./res/handler.png) |
+
+> url 정보에 대하여 어떤 핸들러를 처리해야 할 지 정해주는 것
+
+</br>
+
+- RequestMappingHandlerMapping.class
+- 핸들러가 갖고 있는 메서드 파라미터들을 파라미터에 맞는 정보로 변환해주는 것을 adapter
+
+</br>
+
+### **Resource Handler**
+
+</br>
+
+> 디폴트 서블릿의 요청을 위임해서, 디폴트 서블릿을 통해서 리소를 서빙하는 것.
+
+</br>
+
+## **Day 3**
+
+</br>
+
+### **WebApplicationContext**
+
+</br>
+
+|                    WebApplicationContex                    |
+| :--------------------------------------------------------: |
+| ![WebApplicationContex](./res/web_application_context.png) |
+
+> 애플리케이션 컨텍스트를 상속받고  
+> 서블릿 컨텍스트에 접근할 수 있는 기능이 추가된 애플리케이션 컨텍스트  
+> 서블릿 컨텍스트는 서블릿 컨테이너에 의해 생성되는 객체  
+> 여러 서블릿이 공유가 가능한 정보를 서블릿 컨텍스트에 담아서 사용하는 공유 자원  
+> 모든 애플리케이션 컨텍스트에 접근 가능한 빈? -> Root ApplicationContext...  
+> ServletContext가 만들어질 때 root ApplicationContext가 만들어지고  
+> ServletContext의 setAttribute()에 의해 들어간다.
+> 그러면 디스패처서블릿들은 서블릿 컨텍스트에 접근하고,  
+> 그 곳에서 애플리케이션 컨텍스트를 가져와서  
+> 디스패처 서블릿 컨텍스트가 만든 애플리케이션 컨텍스트와 부모 자식 관계가 형성
+
+</br>
+
+|               WebApplication 동작                |
+| :----------------------------------------------: |
+|       ![web action](./res/web_action.png)        |
+| ![web action detail](./res/web_action_layer.png) |
+
+</br>
+
+> 디스패처 서블릿들이, 웹 애플리케이션 컨텍스트에 있는  
+> 컨트롤러들에게 요청을 위임
+
+</br>
+
+- 프레젠테이션 계층
+  - 사용자 요청에 대해서 처리가 되는 부분
+- 서비스
+  - 비즈니스 로직
+- 데이터 액세스
+  - DAO와 Repository를 통해 DB 접근
+
+</br>
+
+### **REST API**
+
+</br>
+
+> 간단한 의미로, 웹상의 자료를 HTTP위에서 SOAP이나  
+> 쿠키를 통한 세션 트랙킹 같은 별도의 전송 계층 없이  
+> 전송하기 위한 아주 간단한 인터페이스
+
+</br>
+  
+- REST 아키텍처 스타일
+  - 클라이언트 - 서버
+  - 스테이트리스
+  - 캐시
+  - 균일한 인터페이스
+    - URL로 지정한 리소스에 대한 조작을 통일되고 한정적인 인터페이스로 수행하는 아키텍처 스타일
+  - 계층화된 시스템
+
+</br>
+
+|                       HTTP 메시지 컨버터 위치                        |
+| :------------------------------------------------------------------: |
+| ![http message converter location](./res/http_message_converter.png) |
+
+</br>
+
+> 핸들러 어댑터가 매핑해서 핸들러가 호출  
+> 넘겨준 파라미터를 변형하는 것을 Argument Resolver가 실행  
+> 그 후 응답하는 것을 ReturnValueHandler가 처리  
+> @ResponseBody나 HttpEntity가 반환되면  
+> http 메시지 컨버터가 동작
+
+</br>
+
+RestController 추가하기
+argument resolver 내용 디테일하게 ㄱ
+
+</br>
+
+## **Day 4**
+
+</br>
+
+### **SPA**
+
+</br>
+
+- 단일 페이지 웹 애플리케이션
+
+> 사용자 인터렉션에 의해 URL이 변경시 화면 전체의 로드가 없이  
+> 화면의 일부분만 동적으로 렌더링하여 데스크탑 어플리케이션과  
+> 비슷한 유저경험을 제공
+
+</br>
+
+- AJAX를 사용하여 대부분의 리소스(HTML, CSS, Script)들은 어플리케이션 로드시 한 번 읽는다.
+- Json과 같은 데이터만 어플리케이션 실행중에 읽어오고 관련된 화면을 변경시킨다.
+
+</br>
+
+|                  spa                   |
+| :------------------------------------: |
+| ![spa 설명](./res/spa_description.png) |
+
+</br>
+
+- 장점
+  - 페이지 요청시 전체를 렌더링 하지 않고 변경되는 부분만 갱신
+    - 전체 트래픽 감소
+    - 렌더링에서 보다 더 좋은 효율
+    - 모듈화 또는 컴포넌트 개발을 용이하게 함
+    - 백엔드와 프론트엔드이 비교적 명확하게 구분
+
+</br>
+
+- 단점
+  - 웹 애플리케이션에 필요한 정적 리소스를 한 번에 다운하여 초기 구동 속도가 느리다
+  - 데이터 처리를 클라이언트에서 하는 경우가 있어 JS 코드가 외부 노출되어 보안 문제
+  - 검색엔진 최적화가 어렵다.
+    - 검색 엔진이 크롤링할 때 JavaScript를 실행하지 않고 어플리케이션이 로드되기 전의 빈 상태의 코드를 크롤링하기 때문에 인덱싱이 제대로 이루어지지 않는다.
+
+</br>
+
+|                     페이지 로딩                      |
+| :--------------------------------------------------: |
+| ![페이지 로딩 절차](./res/page_loading_sequence.png) |
+
+</br>
+
+- 메뉴 정보를 동적으로 만드는 경우
+  - 계속해서 사용자 데이터 모델에 추가 될 경우 세션이 커지게 된다.
+  - SPA에서는 사용자 데이터 모델의 일부를 브라우저 메모리에 들고 있게 되는 것.
+  - 요청을 할 때 필요한 부분을 그 메모리에서 사용하는 것
+
+</br>
+
+|            라우팅 처리            |
+| :-------------------------------: |
+| ![라우팅 처리](./res/routing.png) |
+
+</br>
+
+### **CORS**
+
+</br>
+
+|                       same-origin                        |
+| :------------------------------------------------------: |
+| ![same origin](/springboot/doc/res/cors_same_origin.png) |
+
+</br>
+
+> HTTP 헤더를 이용해서  
+> 애플리케이션의 다른 origin에  
+> 리소스에 접근 할 수 있도록 하는 메커니즘
+
+</br>
+
+|                      cors sequence                      |
+| :-----------------------------------------------------: |
+| ![cors sequence](/springboot/doc/res/cors_sequence.png) |
+
+</br>
+
+- Options에 origin을 실어서 보낸다. - 보내는 호스트
+- 서버는 액세스를 허용하는 origin을 보낸다.
+- 서버가 origin을 허용하는 것을 판단
+- 그 후 본요청을 보낸다.
+
+</br>
+
+- Simple requests
+  - 메서드
+    - GET
+    - HEAD
+    - POST
+  - 헤더
+    - Accpet
+    - Accept-Language
+    - Content-Language
+    - Content-Type
+  - Content-Type
+    - application/x-www-form-urlencoded
+    - multipart/form-data
+    - text/plain
+  - XMLHttpRequestUpload 객체에는 이벤트 리스터가 등록 X
+    - XMLHttpRequest.upload 프로퍼티를 사용하여 접근
+    - 요청에 ReadableStream 객체 사용 X

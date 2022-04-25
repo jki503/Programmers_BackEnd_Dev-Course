@@ -4,21 +4,16 @@ import com.wix.mysql.EmbeddedMysql;
 import com.zaxxer.hikari.HikariDataSource;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
 import javax.sql.DataSource;
 
-import java.nio.channels.ScatteringByteChannel;
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.UUID;
 
 import static com.wix.mysql.config.Charset.UTF8;
@@ -103,7 +98,7 @@ class CustomerJdbcRepositoryTest {
     @DisplayName("고객을 추가할 수 있다.")
     void testInsert() {
         customerRepository.insert(newCustomer);
-        var retrievedCustomer = customerRepository.findById(newCustomer.getCustomerID());
+        var retrievedCustomer = customerRepository.findById(newCustomer.getCustomerId());
 
         assertThat(retrievedCustomer.isEmpty(), is(false));
         assertThat(retrievedCustomer.get(), samePropertyValuesAs(newCustomer));
@@ -152,8 +147,8 @@ class CustomerJdbcRepositoryTest {
         assertThat(all, hasSize(1));
         assertThat(all, everyItem(samePropertyValuesAs(newCustomer)));
 
-        var byId = customerRepository.findById(newCustomer.getCustomerID());
-        var retrievedCustomer = customerRepository.findById(newCustomer.getCustomerID());
+        var byId = customerRepository.findById(newCustomer.getCustomerId());
+        var retrievedCustomer = customerRepository.findById(newCustomer.getCustomerId());
         assertThat(retrievedCustomer.isEmpty(), is(false));
         assertThat(retrievedCustomer.get(), samePropertyValuesAs(newCustomer));
     }

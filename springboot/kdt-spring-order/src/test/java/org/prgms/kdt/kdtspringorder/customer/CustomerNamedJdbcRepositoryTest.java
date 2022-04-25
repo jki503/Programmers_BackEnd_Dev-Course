@@ -10,8 +10,6 @@ import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.dao.DataAccessException;
-import org.springframework.jdbc.BadSqlGrammarException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
@@ -125,7 +123,7 @@ class CustomerNamedJdbcRepositoryTest {
         customerRepository.insert(newCustomer);
 
 
-        var retrievedCustomer = customerRepository.findById(newCustomer.getCustomerID());
+        var retrievedCustomer = customerRepository.findById(newCustomer.getCustomerId());
 
         assertThat(retrievedCustomer.isEmpty(), is(false));
         assertThat(retrievedCustomer.get(), samePropertyValuesAs(newCustomer));
@@ -174,8 +172,8 @@ class CustomerNamedJdbcRepositoryTest {
         assertThat(all, hasSize(1));
         assertThat(all, everyItem(samePropertyValuesAs(newCustomer)));
 
-        var byId = customerRepository.findById(newCustomer.getCustomerID());
-        var retrievedCustomer = customerRepository.findById(newCustomer.getCustomerID());
+        var byId = customerRepository.findById(newCustomer.getCustomerId());
+        var retrievedCustomer = customerRepository.findById(newCustomer.getCustomerId());
         assertThat(retrievedCustomer.isEmpty(), is(false));
         assertThat(retrievedCustomer.get(), samePropertyValuesAs(newCustomer));
     }
