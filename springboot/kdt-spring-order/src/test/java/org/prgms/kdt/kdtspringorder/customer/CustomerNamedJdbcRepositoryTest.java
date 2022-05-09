@@ -93,7 +93,7 @@ class CustomerNamedJdbcRepositoryTest {
                 .withCharset(UTF8)
                 .withPort(2215)
                 .withUser("test", "test1234!")
-                .withTimeZone("Asia/seoul")
+                .withTimeZone("Asia/Seoul")
                 .build();
         embeddedMysql = anEmbeddedMysql(mysqlConfig)
                 .addSchema("test-order_mgmt", classPathScript("schema.sql"))

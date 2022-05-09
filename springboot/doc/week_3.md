@@ -23,6 +23,12 @@ Author: Jung
   - [**CORS**](#cors)
 
   - [**SPA**](#spa)
+  - [**CORS**](#cors)
+
+  - [**SPA**](#spa)
+  - [**CORS**](#cors)
+
+  - [**SPA**](#spa)
 
   - [**SPA**](#spa)
 
@@ -371,7 +377,8 @@ public class KdtWebApplicationInitializer implements WebApplicationInitializer {
 </br>
 
 RestController 추가하기
-argument resolver 내용 디테일하게 ㄱ
+argument resolver 내용 디테일하게
+04.25(월)
 
 </br>
 
@@ -484,3 +491,5 @@ argument resolver 내용 디테일하게 ㄱ
   - XMLHttpRequestUpload 객체에는 이벤트 리스터가 등록 X
     - XMLHttpRequest.upload 프로퍼티를 사용하여 접근
     - 요청에 ReadableStream 객체 사용 X
+
+</br>
