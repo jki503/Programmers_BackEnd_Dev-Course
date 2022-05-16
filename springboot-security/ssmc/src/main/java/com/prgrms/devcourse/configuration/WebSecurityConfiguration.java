@@ -8,16 +8,12 @@ import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.factory.PasswordEncoderFactories;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
-
-    @Autowired
-    private UserDetailsService userDetailsService;
 
     @Override
     public void configure(WebSecurity web) throws Exception {
@@ -26,45 +22,36 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-
-        PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
-
-        String userPassword = "user123";
-        String adminPassword = "admin123";
-
         auth.inMemoryAuthentication()
-                .withUser("user")
-                .password(passwordEncoder.encode(userPassword))
-                .roles("USER")
-
+                    .withUser("user")
+                    .password("{noop}user123")
+                    .roles("USER")
                 .and()
-                .withUser("admin")
-                .password(passwordEncoder.encode(adminPassword))
-                .roles("ADMIN");
+                    .withUser("admin")
+                    .password("{noop}admin123")
+                    .roles("ADMIN");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/me").hasAnyRole("USER", "ADMIN")
-                .anyRequest().permitAll()
-
+                    .antMatchers("/me").hasAnyRole("USER", "ADMIN")
+                    .anyRequest().permitAll()
                 .and()
-                .formLogin()
-                .defaultSuccessUrl("/")
-                .permitAll()
-
+                    .formLogin()
+                    .defaultSuccessUrl("/")
+                    .permitAll()
                 .and()
-                .logout()
-                .logoutSuccessUrl("/")
-                .permitAll()
-
+                    .logout()
+                    .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                    .logoutSuccessUrl("/")
+                    .invalidateHttpSession(true)
+                    .clearAuthentication(true)
+                    .permitAll()
                 .and()
-                .rememberMe()
-                .key("unique")
-                .rememberMeParameter("remember-me")
-                .userDetailsService(userDetailsService)
-                .tokenValiditySeconds(60*5);
+                    .rememberMe()
+                    .rememberMeParameter("remember-me")
+                    .tokenValiditySeconds(60*5);
     }
 
 
