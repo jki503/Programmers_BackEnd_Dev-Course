@@ -8,8 +8,10 @@
     <link rel="shortcut icon" type="image/x-icon" th:href="@{/assets/icons/favi.png}">
 </head>
 <body>
-index page<br/>
-<span sec:authentication="name"></span>님 반갑습니다.
-<span th:text="${#authentication.getAuthorities()}">
+send page
+<form th:action="@{/send}" method="post">
+    <input type="text" name="nickname" placeholder="input your nickname">
+    <button type="submit">submit</button>
+</form>
 </body>
 </html>
