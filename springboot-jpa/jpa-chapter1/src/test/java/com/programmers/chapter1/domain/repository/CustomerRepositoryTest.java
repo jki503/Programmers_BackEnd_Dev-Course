@@ -18,7 +18,6 @@ class CustomerRepositoryTest {
 
     @Autowired
     CustomerRepository customerRepository;
-    private CustomerRepository customerRepository1;
 
     @AfterEach
     void setUp() {
