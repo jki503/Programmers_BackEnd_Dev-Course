@@ -1,14 +1,13 @@
 package com.prgrms.devcourse.configuration;
 
+import com.prgrms.devcourse.user.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.support.SpringFactoriesLoader;
 import org.springframework.core.task.AsyncTaskExecutor;
-import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.security.access.AccessDecisionManager;
 import org.springframework.security.access.AccessDecisionVoter;
@@ -23,8 +22,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.task.DelegatingSecurityContextAsyncTaskExecutor;
@@ -34,7 +31,6 @@ import org.springframework.security.web.access.expression.WebExpressionVoter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import javax.servlet.http.HttpServletResponse;
-import javax.sql.DataSource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,35 +41,16 @@ public class WebSecurityConfigure extends WebSecurityConfigurerAdapter {
 
     private final Logger log = LoggerFactory.getLogger(WebSecurityConfigure.class);
 
-    private final DataSource dataSource;
+    private UserService userService;
 
-    public WebSecurityConfigure(DataSource dataSource) {
-        this.dataSource = dataSource;
+    @Autowired
+    public void setUserService(UserService userService) {
+        this.userService = userService;
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.jdbcAuthentication()
-                .dataSource(dataSource)
-                .usersByUsernameQuery(
-                        "SELECT " +
-                                "login_id, passwd, true " +
-                                "FROM " +
-                                "USERS " +
-                                "WHERE " +
-                                "login_id = ?"
-                )
-                .groupAuthoritiesByUsername(
-                        "SELECT " +
-                                "u.login_id, g.name, p.name " +
-                                "FROM " +
-                                "users u JOIN groups g ON u.group_id = g.id " +
-                                "LEFT JOIN group_permission gp ON g.id = gp.group_id " +
-                                "JOIN permissions p ON p.id = gp.permission_id " +
-                                "WHERE " +
-                                "u.login_id = ?"
-                )
-                .getUserDetailsService().setEnableAuthorities(false);
+        auth.userDetailsService(userService);
     }
 
 
