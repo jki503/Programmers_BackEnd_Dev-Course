@@ -41,3 +41,4 @@ Author: Jung
 ## **그냥 같이 일하면 협업?**
 
 - [W13D1](./cooperation/doc/w13d1.md)
+- [W13D2](./cooperation/doc/w13d2.md)
