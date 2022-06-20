@@ -37,6 +37,7 @@ spring:
       encoding: UTF-8
 server:
   port: 8080
+
 jwt:
   header: token
   issuer: prgrms

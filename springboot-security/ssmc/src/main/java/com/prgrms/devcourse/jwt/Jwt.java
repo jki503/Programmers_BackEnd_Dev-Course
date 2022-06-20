@@ -7,13 +7,12 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
-
 import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 public final class Jwt {
 
@@ -31,14 +30,15 @@ public final class Jwt {
         this.issuer = issuer;
         this.clientSecret = clientSecret;
         this.expirySeconds = expirySeconds;
-        this.algorithm = Algorithm.HMAC512(clientSecret);
+        this.algorithm = Algorithm.HMAC512(clientSecret); // HS512 64바이트 클라이언트 시크릿 요구
         this.jwtVerifier = com.auth0.jwt.JWT.require(algorithm)
-                .withIssuer(issuer)
-                .build();
+            .withIssuer(issuer)
+            .build();
     }
 
+    // 토큰을 만들어주는 메서드 sign
     public String sign(Claims claims) {
-        Date now = new Date();
+        Date now = new Date(); // WithIssuedAt은 DATE 타입을 받기 때문에
         JWTCreator.Builder builder = com.auth0.jwt.JWT.create();
         builder.withIssuer(issuer);
         builder.withIssuedAt(now);
@@ -50,6 +50,7 @@ public final class Jwt {
         return builder.sign(algorithm);
     }
 
+    // 토큰을 디코드 해서 claim으로 리턴
     public Claims verify(String token) throws JWTVerificationException {
         return new Claims(jwtVerifier.verify(token));
     }
@@ -74,7 +75,9 @@ public final class Jwt {
         return jwtVerifier;
     }
 
+    // JWT 토큰을 만들거나 검증할 때 필요한 데이터를 전달하기 위한 클래스
     static public class Claims {
+
         String username;
         String[] roles;
         Date iat;
@@ -82,10 +85,12 @@ public final class Jwt {
 
         private Claims() {/*no-op*/}
 
+        // DecodedJWT를 통해 Claims 객체를 생성하도록
         Claims(DecodedJWT decodedJWT) {
             Claim username = decodedJWT.getClaim("username");
-            if (!username.isNull())
+            if (!username.isNull()) {
                 this.username = username.asString();
+            }
             Claim roles = decodedJWT.getClaim("roles");
             if (!roles.isNull()) {
                 this.roles = roles.asArray(String.class);
@@ -129,11 +134,11 @@ public final class Jwt {
         @Override
         public String toString() {
             return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
-                    .append("username", username)
-                    .append("roles", Arrays.toString(roles))
-                    .append("iat", iat)
-                    .append("exp", exp)
-                    .toString();
+                .append("username", username)
+                .append("roles", Arrays.toString(roles))
+                .append("iat", iat)
+                .append("exp", exp)
+                .toString();
         }
     }
 
